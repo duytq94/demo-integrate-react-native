@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  BackHandler
 } from 'react-native';
 import {connect} from 'react-redux';
 import styles from './Profile.Style';
@@ -39,6 +40,10 @@ class ProfileScreen extends Component {
     this.props.navigation.openDrawer();
   };
 
+  onExitPress = () => {
+    BackHandler.exitApp()
+  };
+
   render() {
     return (
       <View style={styles.mainContainer}>
@@ -58,7 +63,7 @@ class ProfileScreen extends Component {
 
         {this.state.getProfile.fetching ? (
           <View style={styles.viewLoading}>
-            <ActivityIndicator />
+            <ActivityIndicator/>
           </View>
         ) : null}
       </View>
@@ -85,7 +90,15 @@ class ProfileScreen extends Component {
         <View style={styles.viewWrapTitleToolbar}>
           <Text style={styles.titleToolbar}>Profile</Text>
         </View>
-        <View style={styles.viewWrapIcRight} />
+        <TouchableOpacity
+          style={styles.viewWrapIcRight}
+          onPress={this.onExitPress}>
+          <MaterialCommunityIcons
+            name={'exit-to-app'}
+            size={30}
+            color={colors.white}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
@@ -108,7 +121,7 @@ class ProfileScreen extends Component {
         </View>
       );
     } else if (this.state.getProfile.err) {
-      return <NoDataView onRetryPress={this.getUserProfile} />;
+      return <NoDataView onRetryPress={this.getUserProfile}/>;
     } else {
       return null;
     }

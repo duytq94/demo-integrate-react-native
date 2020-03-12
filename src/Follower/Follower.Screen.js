@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {
   ActivityIndicator,
+  BackHandler,
   FlatList,
   Image,
   StatusBar,
@@ -40,6 +41,10 @@ class FollowerScreen extends Component {
     this.props.navigation.openDrawer();
   };
 
+  onExitPress = () => {
+    BackHandler.exitApp()
+  };
+
   render() {
     return (
       <View style={styles.mainContainer}>
@@ -57,7 +62,7 @@ class FollowerScreen extends Component {
 
         {this.state.getFollower.fetching ? (
           <View style={styles.viewLoading}>
-            <ActivityIndicator />
+            <ActivityIndicator/>
           </View>
         ) : null}
       </View>
@@ -84,7 +89,15 @@ class FollowerScreen extends Component {
         <View style={styles.viewWrapTitleToolbar}>
           <Text style={styles.titleToolbar}>Follower</Text>
         </View>
-        <View style={styles.viewWrapIcRight} />
+        <TouchableOpacity
+          style={styles.viewWrapIcRight}
+          onPress={this.onExitPress}>
+          <MaterialCommunityIcons
+            name={'exit-to-app'}
+            size={30}
+            color={colors.white}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
@@ -103,7 +116,7 @@ class FollowerScreen extends Component {
         />
       );
     } else if (this.state.getFollower.err) {
-      return <NoDataView onRetryPress={this.getFollower} />;
+      return <NoDataView onRetryPress={this.getFollower}/>;
     } else {
       return null;
     }
@@ -112,14 +125,14 @@ class FollowerScreen extends Component {
   renderItem = ({item, index}) => {
     return (
       <View style={styles.viewWrapItem}>
-        <Image style={styles.avatar} source={{uri: item.avatar_url}} />
+        <Image style={styles.avatar} source={{uri: item.avatar_url}}/>
         <Text style={styles.textName}>{item.login}</Text>
       </View>
     );
   };
 
   renderFooterList = () => {
-    return <View style={{height: 10}} />;
+    return <View style={{height: 10}}/>;
   };
 }
 

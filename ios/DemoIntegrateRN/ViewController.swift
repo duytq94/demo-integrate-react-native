@@ -2,11 +2,8 @@ import UIKit
 import React
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var lbl: UILabel!
-    
+        
     @IBAction func btnGoReactView(_ sender: Any) {
-        lbl.text = "aaaaaa"
         
         let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
 
