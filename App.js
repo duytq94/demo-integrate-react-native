@@ -9,6 +9,9 @@ import rootReducer from './src/reducers';
 import rootSaga from './src/sagas';
 import RootContainer from './src/Root/RootContainer.Screen';
 import 'react-native-gesture-handler';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// for iOS only
+MaterialCommunityIcons.loadFont();
 
 const sagaMiddleware = createSagaMiddleware();
 const persistConfig = {
