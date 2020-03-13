@@ -1,11 +1,7 @@
 package com.example.demointegratern;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
@@ -43,7 +39,12 @@ public class RNModuleActivity extends Activity implements DefaultHardwareBackBtn
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
-        mReactRootView.startReactApplication(mReactInstanceManager, "DemoIntegrateRN", null);
+
+        // Send message from native code
+        Bundle initialProperties = new Bundle();
+        initialProperties.putString("message_from_native", getIntent().getExtras().get("message_from_native").toString());
+        mReactRootView.startReactApplication(mReactInstanceManager, "DemoIntegrateRN", initialProperties);
+
         setContentView(mReactRootView);
     }
 

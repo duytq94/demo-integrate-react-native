@@ -10,7 +10,8 @@ import rootSaga from './src/sagas';
 import RootContainer from './src/Root/RootContainer.Screen';
 import 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-// for iOS only
+import Toast from "react-native-simple-toast";
+// for iOS only since enable
 MaterialCommunityIcons.loadFont();
 
 const sagaMiddleware = createSagaMiddleware();
@@ -27,11 +28,16 @@ const persistor = persistStore(store);
 sagaMiddleware.run(rootSaga);
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    Toast.show(this.props.message_from_native)
+  }
+
   render() {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <RootContainer />
+          <RootContainer/>
         </PersistGate>
       </Provider>
     );
