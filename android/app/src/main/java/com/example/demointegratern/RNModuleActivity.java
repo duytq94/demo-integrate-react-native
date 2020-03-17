@@ -36,6 +36,7 @@ public class RNModuleActivity extends Activity implements DefaultHardwareBackBtn
                 .addPackage(new RNGestureHandlerPackage())
                 .addPackage(new AsyncStoragePackage())
                 .addPackage(new SafeAreaContextPackage())
+                .addPackage(new TestConnectNativePackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();

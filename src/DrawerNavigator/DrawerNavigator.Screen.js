@@ -4,6 +4,7 @@ import FollowerScreen from '../Follower/Follower.Screen';
 import React, {Component} from 'react';
 import colors from '../Themes/Colors';
 import styles from './DrawerNavigator.Style';
+import TestConnectNativeScreen from "../TestConnectNative/TestConnectNative.Screen";
 
 const Drawer = createDrawerNavigator();
 
@@ -24,6 +25,11 @@ export class DrawerNavigatorScreen extends Component {
           name="FollowerScreen"
           component={FollowerScreen}
           options={{drawerLabel: 'Follower'}}
+        />
+        <Drawer.Screen
+          name="TestConnectNativeScreen"
+          component={TestConnectNativeScreen}
+          options={{drawerLabel: 'Test connect native'}}
         />
       </Drawer.Navigator>
     );

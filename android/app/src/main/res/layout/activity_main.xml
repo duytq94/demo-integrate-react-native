@@ -22,7 +22,7 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Send some messages to react native scren..." />
+        android:hint="Typing some messages to react native..." />
 
     <Button
         android:id="@+id/btnGoRNScreen"

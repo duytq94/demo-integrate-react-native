@@ -11,7 +11,7 @@ import RootContainer from './src/Root/RootContainer.Screen';
 import 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Toast from "react-native-simple-toast";
-// for iOS only since enable
+// for iOS only since enable use_frameworks! in podfile
 MaterialCommunityIcons.loadFont();
 
 const sagaMiddleware = createSagaMiddleware();
@@ -30,7 +30,7 @@ sagaMiddleware.run(rootSaga);
 export default class App extends Component {
   constructor(props) {
     super(props);
-    Toast.show(this.props.message_from_native)
+    Toast.show(`Message from native: "${this.props.message_from_native}"`);
   }
 
   render() {

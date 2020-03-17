@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 00265C342420866A0047B6D4 /* TestConnectNative.m */; };
+		00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00265C362420BF820047B6D4 /* TestConnectNative.swift */; };
 		1972010711CDC81D5272B59E /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DD97534A5D8A95F1F68C3A /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework */; };
 		1E70B3406C6B4A469DACD4F5 /* iCielVAGRoundedNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1604CEEB89642EE8FD94279 /* iCielVAGRoundedNext-Regular.otf */; };
 		3EF5B4D14A365C60EF4788F3 /* Pods_DemoIntegrateRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED0FD11842B1ACB90B8ECB /* Pods_DemoIntegrateRNTests.framework */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoIntegrateRN-Bridging-Header.h"; sourceTree = "<group>"; };
+		00265C342420866A0047B6D4 /* TestConnectNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestConnectNative.m; sourceTree = "<group>"; };
+		00265C362420BF820047B6D4 /* TestConnectNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnectNative.swift; sourceTree = "<group>"; };
 		130A0DCDC72A2F2A9C7B28C0 /* Pods-DemoIntegrateRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN.debug.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN/Pods-DemoIntegrateRN.debug.xcconfig"; sourceTree = "<group>"; };
 		18ACE12614744C21903E9BBA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		1FBA3C2B77E14DB4AC1749D2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -67,10 +72,10 @@
 		4027896A2419F02B00DDDD5B /* DemoIntegrateRNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoIntegrateRNUITests.swift; sourceTree = "<group>"; };
 		4027896C2419F02B00DDDD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43DD97534A5D8A95F1F68C3A /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6155125A464482B1305DD4 /* iCielVAGRoundedNext-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-LightItalic.otf"; path = "../assets/fonts/iCielVAGRoundedNext-LightItalic.otf"; sourceTree = "<group>"; };
+		4C6155125A464482B1305DD4 /* iCielVAGRoundedNext-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-LightItalic.otf"; path = "../assets/fonts/iCielVAGRoundedNext-LightItalic.otf"; sourceTree = "<group>"; };
 		56310AC3A06F4EE9B3F44DAC /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		6A2E37AE7E587482006C6117 /* Pods-DemoIntegrateRN-DemoIntegrateRNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN-DemoIntegrateRNUITests.release.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN-DemoIntegrateRNUITests/Pods-DemoIntegrateRN-DemoIntegrateRNUITests.release.xcconfig"; sourceTree = "<group>"; };
-		788A12AC50B5454DBB05E81C /* iCielVAGRoundedNext-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Medium.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Medium.otf"; sourceTree = "<group>"; };
+		788A12AC50B5454DBB05E81C /* iCielVAGRoundedNext-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Medium.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Medium.otf"; sourceTree = "<group>"; };
 		846D12D046DDE76A361CAB61 /* Pods-DemoIntegrateRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN.release.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN/Pods-DemoIntegrateRN.release.xcconfig"; sourceTree = "<group>"; };
 		A640B0A512184E97A1B96C31 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		A803ACA9EDF4E61A7655EA16 /* Pods-DemoIntegrateRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRNTests.release.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRNTests/Pods-DemoIntegrateRNTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,16 +83,16 @@
 		AB59D2001CC540C0BFB3EBC6 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		AD7FC2DA1DB34EEE9E5ADCF5 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		AFB56D767AA8E13092E6A8E1 /* Pods-DemoIntegrateRN-DemoIntegrateRNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN-DemoIntegrateRNUITests.debug.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN-DemoIntegrateRNUITests/Pods-DemoIntegrateRN-DemoIntegrateRNUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B1604CEEB89642EE8FD94279 /* iCielVAGRoundedNext-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Regular.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Regular.otf"; sourceTree = "<group>"; };
-		BA8EFE8B8D234EC09202FED9 /* iCielVAGRoundedNext-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Light.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Light.otf"; sourceTree = "<group>"; };
+		B1604CEEB89642EE8FD94279 /* iCielVAGRoundedNext-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Regular.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Regular.otf"; sourceTree = "<group>"; };
+		BA8EFE8B8D234EC09202FED9 /* iCielVAGRoundedNext-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Light.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Light.otf"; sourceTree = "<group>"; };
 		CD88FAE4ACF140D2871C484F /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		D5B6129B1163402DA69110EA /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		DFDDAC2D110C4A01B1ED0470 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		E55882010E654A70BA600CD9 /* iCielVAGRoundedNext-DemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-DemiBold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-DemiBold.otf"; sourceTree = "<group>"; };
+		E55882010E654A70BA600CD9 /* iCielVAGRoundedNext-DemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-DemiBold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-DemiBold.otf"; sourceTree = "<group>"; };
 		E96D0FE13F1A48878F14E333 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		ED65607C18AE91310A5C828C /* Pods_DemoIntegrateRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoIntegrateRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDED0FD11842B1ACB90B8ECB /* Pods_DemoIntegrateRNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoIntegrateRNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F321FDDCE5724D229FE1EFA1 /* iCielVAGRoundedNext-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Bold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Bold.otf"; sourceTree = "<group>"; };
+		F321FDDCE5724D229FE1EFA1 /* iCielVAGRoundedNext-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "iCielVAGRoundedNext-Bold.otf"; path = "../assets/fonts/iCielVAGRoundedNext-Bold.otf"; sourceTree = "<group>"; };
 		F669C4E2E4B340C69C693B02 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +180,9 @@
 				402789512419F02A00DDDD5B /* Assets.xcassets */,
 				402789532419F02A00DDDD5B /* LaunchScreen.storyboard */,
 				402789562419F02A00DDDD5B /* Info.plist */,
+				00265C342420866A0047B6D4 /* TestConnectNative.m */,
+				00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */,
+				00265C362420BF820047B6D4 /* TestConnectNative.swift */,
 			);
 			path = DemoIntegrateRN;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 				TargetAttributes = {
 					402789442419F02900DDDD5B = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					4027895A2419F02B00DDDD5B = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -471,8 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */,
 				4027894D2419F02900DDDD5B /* ViewController.swift in Sources */,
 				402789492419F02900DDDD5B /* AppDelegate.swift in Sources */,
+				00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */,
 				4027894B2419F02900DDDD5B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +658,7 @@
 			baseConfigurationReference = 130A0DCDC72A2F2A9C7B28C0 /* Pods-DemoIntegrateRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoIntegrateRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -655,6 +667,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duytq.DemoIntegrateRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoIntegrateRN/DemoIntegrateRN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -665,6 +679,7 @@
 			baseConfigurationReference = 846D12D046DDE76A361CAB61 /* Pods-DemoIntegrateRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoIntegrateRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -673,6 +688,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duytq.DemoIntegrateRN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoIntegrateRN/DemoIntegrateRN-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
