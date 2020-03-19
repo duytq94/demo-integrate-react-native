@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import {
-  ActivityIndicator,
   TextInput,
   StatusBar,
   Text,
   TouchableOpacity,
   View,
-  BackHandler, NativeModules
+  NativeModules
 } from 'react-native';
 import {connect} from 'react-redux';
 import styles from './TestConnectNative.Style';
 import colors from '../Themes/Colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {barStyle} from '../const';
+import TestConnectNative from "./TestConnectNative";
 
 class TestConnectNativeScreen extends Component {
   constructor(props) {
@@ -27,12 +27,12 @@ class TestConnectNativeScreen extends Component {
   };
 
   sendMessageToNative = () => {
-    NativeModules.TestConnectNative.sendMessageToNative(this.state.messageToNative);
+    TestConnectNative.sendMessageToNative(this.state.messageToNative);
   };
 
   sendCallbackToNative = () => {
-    NativeModules.TestConnectNative.sendCallbackToNative((nativeMessage) => {
-      console.log(`This log is from js code callback with native message: "${nativeMessage}"`)
+    TestConnectNative.sendCallbackToNative((nativeMessage) => {
+      console.log(`This log is from js code callback with native message: "${nativeMessage}"`);
     });
   };
 
