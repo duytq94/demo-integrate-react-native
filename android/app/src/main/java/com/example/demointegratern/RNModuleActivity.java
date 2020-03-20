@@ -11,6 +11,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
@@ -24,7 +25,10 @@ public class RNModuleActivity extends Activity implements DefaultHardwareBackBtn
         super.onCreate(savedInstanceState);
         SoLoader.init(this, false);
 
-        mReactRootView = new ReactRootView(this);
+        // If not, navigation.goBack() not working
+        mReactRootView = new RNGestureHandlerEnabledRootView(this);
+        // mReactRootView = new ReactRootView(this);
+
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setCurrentActivity(this)

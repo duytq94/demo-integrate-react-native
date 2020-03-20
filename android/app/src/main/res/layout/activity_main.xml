@@ -28,13 +28,13 @@
         android:id="@+id/btnGoRNScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="200dp"
         android:background="@color/colorPrimary"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="Go to react native screen"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
 </LinearLayout>
