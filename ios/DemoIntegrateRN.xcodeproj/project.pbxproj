@@ -173,6 +173,7 @@
 		402789472419F02900DDDD5B /* DemoIntegrateRN */ = {
 			isa = PBXGroup;
 			children = (
+				00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */,
 				402789482419F02900DDDD5B /* AppDelegate.swift */,
 				4027894A2419F02900DDDD5B /* SceneDelegate.swift */,
 				4027894C2419F02900DDDD5B /* ViewController.swift */,
@@ -181,7 +182,6 @@
 				402789532419F02A00DDDD5B /* LaunchScreen.storyboard */,
 				402789562419F02A00DDDD5B /* Info.plist */,
 				00265C342420866A0047B6D4 /* TestConnectNative.m */,
-				00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */,
 				00265C362420BF820047B6D4 /* TestConnectNative.swift */,
 			);
 			path = DemoIntegrateRN;

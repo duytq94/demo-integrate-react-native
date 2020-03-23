@@ -1,6 +1,7 @@
 package com.example.demointegratern;
 
 import android.util.Log;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -21,8 +22,9 @@ public class TestConnectNativeModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void sendMessageToNative(String rnMessage) {
-       Log.d("This log is from java", rnMessage);
+        Log.d("This log is from java", rnMessage);
     }
+
     @ReactMethod
     public void sendCallbackToNative(Callback rnCallback) {
         rnCallback.invoke("A greeting from java");
