@@ -27,10 +27,13 @@ const persistor = persistStore(store);
 
 sagaMiddleware.run(rootSaga);
 
+export let rootTag = 1;
+
 export default class App extends Component {
   constructor(props) {
     super(props);
     Toast.show(`Message from native: "${this.props.message_from_native}"`);
+    rootTag = this.props.rootTag;
   }
 
   render() {

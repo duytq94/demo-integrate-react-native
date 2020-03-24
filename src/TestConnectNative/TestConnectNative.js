@@ -1,5 +1,5 @@
 // If TestConnectNative is an package from npm, you can think this is index.js file
-import {NativeModules} from 'react-native';
+import {BackHandler, NativeModules, Platform} from 'react-native';
 
 const testConnectNative = NativeModules.TestConnectNative;
 
@@ -10,6 +10,14 @@ const TestConnectNative = {
 
   sendCallback: callback => {
     testConnectNative.sendCallbackToNative(callback);
+  },
+
+  exitRN: tag => {
+    if (Platform.OS === 'ios') {
+      testConnectNative.dismissPresentedViewController(tag);
+    } else {
+      BackHandler.exitApp();
+    }
   },
 };
 

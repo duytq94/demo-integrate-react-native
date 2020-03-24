@@ -15,6 +15,8 @@ import NoDataView from '../Components/NoDataView';
 import colors from '../Themes/Colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {barStyle} from '../const';
+import TestConnectNative from '../TestConnectNative/TestConnectNative';
+import {rootTag} from '../../App';
 
 class ProfileScreen extends Component {
   constructor(props) {
@@ -41,7 +43,7 @@ class ProfileScreen extends Component {
   };
 
   onExitPress = () => {
-    BackHandler.exitApp();
+    TestConnectNative.exitRN(rootTag);
   };
 
   render() {

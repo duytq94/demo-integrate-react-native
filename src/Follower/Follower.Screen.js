@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
   ActivityIndicator,
-  BackHandler,
   FlatList,
   Image,
   StatusBar,
@@ -16,6 +15,8 @@ import NoDataView from '../Components/NoDataView';
 import colors from '../Themes/Colors';
 import {barStyle} from '../const';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import TestConnectNative from '../TestConnectNative/TestConnectNative';
+import {rootTag} from '../../App';
 
 class FollowerScreen extends Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class FollowerScreen extends Component {
   };
 
   onExitPress = () => {
-    BackHandler.exitApp();
+    TestConnectNative.exitRN(rootTag);
   };
 
   render() {

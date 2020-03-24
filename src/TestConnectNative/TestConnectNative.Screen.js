@@ -6,6 +6,7 @@ import colors from '../Themes/Colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {barStyle} from '../const';
 import TestConnectNative from './TestConnectNative';
+import {rootTag} from '../../App';
 
 class TestConnectNativeScreen extends Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class TestConnectNativeScreen extends Component {
     };
   }
 
-  onExitPress = () => {};
+  onExitPress = () => {
+    TestConnectNative.exitRN(rootTag);
+  };
 
   sendMessageToNative = () => {
     TestConnectNative.sendMessage(this.state.messageToNative);

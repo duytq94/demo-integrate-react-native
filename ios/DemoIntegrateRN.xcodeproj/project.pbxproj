@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 00265C342420866A0047B6D4 /* TestConnectNative.m */; };
 		00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00265C362420BF820047B6D4 /* TestConnectNative.swift */; };
+		00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D083272429E31C00C54A10 /* RNViewManager.swift */; };
 		1972010711CDC81D5272B59E /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DD97534A5D8A95F1F68C3A /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework */; };
 		1E70B3406C6B4A469DACD4F5 /* iCielVAGRoundedNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1604CEEB89642EE8FD94279 /* iCielVAGRoundedNext-Regular.otf */; };
 		3EF5B4D14A365C60EF4788F3 /* Pods_DemoIntegrateRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED0FD11842B1ACB90B8ECB /* Pods_DemoIntegrateRNTests.framework */; };
@@ -49,6 +50,7 @@
 		00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoIntegrateRN-Bridging-Header.h"; sourceTree = "<group>"; };
 		00265C342420866A0047B6D4 /* TestConnectNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestConnectNative.m; sourceTree = "<group>"; };
 		00265C362420BF820047B6D4 /* TestConnectNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnectNative.swift; sourceTree = "<group>"; };
+		00D083272429E31C00C54A10 /* RNViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewManager.swift; sourceTree = "<group>"; };
 		130A0DCDC72A2F2A9C7B28C0 /* Pods-DemoIntegrateRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN.debug.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN/Pods-DemoIntegrateRN.debug.xcconfig"; sourceTree = "<group>"; };
 		18ACE12614744C21903E9BBA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		1FBA3C2B77E14DB4AC1749D2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				402789562419F02A00DDDD5B /* Info.plist */,
 				00265C342420866A0047B6D4 /* TestConnectNative.m */,
 				00265C362420BF820047B6D4 /* TestConnectNative.swift */,
+				00D083272429E31C00C54A10 /* RNViewManager.swift */,
 			);
 			path = DemoIntegrateRN;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */,
+				00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */,
 				4027894D2419F02900DDDD5B /* ViewController.swift in Sources */,
 				402789492419F02900DDDD5B /* AppDelegate.swift in Sources */,
 				00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */,

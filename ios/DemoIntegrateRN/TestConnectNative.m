@@ -4,5 +4,6 @@
 
 RCT_EXTERN_METHOD(sendMessageToNative: (NSString)rnMessage)
 RCT_EXTERN_METHOD(sendCallbackToNative: (RCTResponseSenderBlock)rnCallback)
+RCT_EXTERN_METHOD(dismissPresentedViewController:(nonnull NSNumber *)reactTag)
 
 @end
