@@ -4,7 +4,7 @@ import FollowerScreen from '../Follower/Follower.Screen';
 import React, {Component} from 'react';
 import colors from '../Themes/Colors';
 import styles from './DrawerNavigator.Style';
-import TestConnectNativeScreen from "../TestConnectNative/TestConnectNative.Screen";
+import TestConnectNativeScreen from '../TestConnectNative/TestConnectNative.Screen';
 
 const Drawer = createDrawerNavigator();
 

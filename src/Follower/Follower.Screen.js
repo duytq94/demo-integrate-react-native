@@ -42,7 +42,7 @@ class FollowerScreen extends Component {
   };
 
   onExitPress = () => {
-    BackHandler.exitApp()
+    BackHandler.exitApp();
   };
 
   render() {
@@ -62,7 +62,7 @@ class FollowerScreen extends Component {
 
         {this.state.getFollower.fetching ? (
           <View style={styles.viewLoading}>
-            <ActivityIndicator/>
+            <ActivityIndicator />
           </View>
         ) : null}
       </View>
@@ -116,7 +116,7 @@ class FollowerScreen extends Component {
         />
       );
     } else if (this.state.getFollower.err) {
-      return <NoDataView onRetryPress={this.getFollower}/>;
+      return <NoDataView onRetryPress={this.getFollower} />;
     } else {
       return null;
     }
@@ -125,14 +125,14 @@ class FollowerScreen extends Component {
   renderItem = ({item, index}) => {
     return (
       <View style={styles.viewWrapItem}>
-        <Image style={styles.avatar} source={{uri: item.avatar_url}}/>
+        <Image style={styles.avatar} source={{uri: item.avatar_url}} />
         <Text style={styles.textName}>{item.login}</Text>
       </View>
     );
   };
 
   renderFooterList = () => {
-    return <View style={{height: 10}}/>;
+    return <View style={{height: 10}} />;
   };
 }
 

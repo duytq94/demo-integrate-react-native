@@ -7,13 +7,13 @@ export default StyleSheet.create({
   ...ApplicationStyle,
   textInput: {
     height: 50,
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: colors.boldGrey,
     margin: 20,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
   btnSend: {
     backgroundColor: colors.charcoalGrey,
@@ -34,6 +34,6 @@ export default StyleSheet.create({
     fontFamily: fontFamily.regular,
     color: colors.charcoalGrey,
     fontSize: fontSize.medium,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
 });

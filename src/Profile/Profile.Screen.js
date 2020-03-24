@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {
   ActivityIndicator,
+  BackHandler,
   Image,
   StatusBar,
   Text,
   TouchableOpacity,
   View,
-  BackHandler
 } from 'react-native';
 import {connect} from 'react-redux';
 import styles from './Profile.Style';
@@ -41,7 +41,7 @@ class ProfileScreen extends Component {
   };
 
   onExitPress = () => {
-    BackHandler.exitApp()
+    BackHandler.exitApp();
   };
 
   render() {
@@ -63,7 +63,7 @@ class ProfileScreen extends Component {
 
         {this.state.getProfile.fetching ? (
           <View style={styles.viewLoading}>
-            <ActivityIndicator/>
+            <ActivityIndicator />
           </View>
         ) : null}
       </View>
@@ -121,7 +121,7 @@ class ProfileScreen extends Component {
         </View>
       );
     } else if (this.state.getProfile.err) {
-      return <NoDataView onRetryPress={this.getUserProfile}/>;
+      return <NoDataView onRetryPress={this.getUserProfile} />;
     } else {
       return null;
     }

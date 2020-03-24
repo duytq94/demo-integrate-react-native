@@ -10,7 +10,7 @@ import rootSaga from './src/sagas';
 import RootContainer from './src/Root/RootContainer.Screen';
 import 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Toast from "react-native-simple-toast";
+import Toast from 'react-native-simple-toast';
 // for iOS only since enable use_frameworks! in podfile
 MaterialCommunityIcons.loadFont();
 
@@ -37,7 +37,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <RootContainer/>
+          <RootContainer />
         </PersistGate>
       </Provider>
     );

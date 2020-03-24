@@ -1,38 +1,31 @@
 import React, {Component} from 'react';
-import {
-  TextInput,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View,
-  NativeModules
-} from 'react-native';
+import {StatusBar, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {connect} from 'react-redux';
 import styles from './TestConnectNative.Style';
 import colors from '../Themes/Colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {barStyle} from '../const';
-import TestConnectNative from "./TestConnectNative";
+import TestConnectNative from './TestConnectNative';
 
 class TestConnectNativeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      messageToNative: ""
-    }
+      messageToNative: '',
+    };
   }
 
-  onExitPress = () => {
-
-  };
+  onExitPress = () => {};
 
   sendMessageToNative = () => {
-    TestConnectNative.sendMessageToNative(this.state.messageToNative);
+    TestConnectNative.sendMessage(this.state.messageToNative);
   };
 
   sendCallbackToNative = () => {
-    TestConnectNative.sendCallbackToNative((nativeMessage) => {
-      console.log(`This log is from js code callback with native message: "${nativeMessage}"`);
+    TestConnectNative.sendCallback(nativeMessage => {
+      console.log(
+        `This log is from js code callback with native message: "${nativeMessage}"`,
+      );
     });
   };
 
@@ -46,7 +39,7 @@ class TestConnectNativeScreen extends Component {
         {this.renderToolbar()}
         <TextInput
           style={styles.textInput}
-          placeholder={"Typing some messages to native..."}
+          placeholder={'Typing some messages to native...'}
           onChangeText={newText => this.setState({messageToNative: newText})}
         />
         <Text style={styles.textInfo}>Check log to see the result</Text>
@@ -96,8 +89,6 @@ class TestConnectNativeScreen extends Component {
       </View>
     );
   };
-
-
 }
 
 const mapStateToProps = state => {
