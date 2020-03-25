@@ -26,8 +26,8 @@ class RNViewManager: NSObject {
 extension RNViewManager: RCTBridgeDelegate {
     func sourceURL(for bridge: RCTBridge!) -> URL! {
         // Debug
-//        return URL(string: "http://localhost:8081/index.bundle?platform=ios")
+        return URL(string: "http://localhost:8081/index.bundle?platform=ios")
         // Release
-        return Bundle.main.url(forResource: "main", withExtension: "jsbundle")
+        // return Bundle.main.url(forResource: "main", withExtension: "jsbundle")
     }
 }

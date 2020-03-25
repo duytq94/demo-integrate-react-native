@@ -249,7 +249,7 @@
 				402789422419F02900DDDD5B /* Frameworks */,
 				402789432419F02900DDDD5B /* Resources */,
 				E69241FD71420DBD04E720FE /* [CP] Embed Pods Frameworks */,
-				00D057EC242B1E3A002B9F1A /* Bundle React Native code and images */,
+				00D057FF242B54B1002B9F1A /* Bundle React Native code and images */,
 			);
 			buildRules = (
 			);
@@ -394,7 +394,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoIntegrateRN-DemoIntegrateRNUITests/Pods-DemoIntegrateRN-DemoIntegrateRNUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		00D057EC242B1E3A002B9F1A /* Bundle React Native code and images */ = {
+		00D057FF242B54B1002B9F1A /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
