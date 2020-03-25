@@ -17,9 +17,24 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'KeyAlias'
+            keyPassword 'android'
+            storeFile file("keystore/demointegratern.keystore")
+            storePassword 'android'
+        }
+        release {
+            keyAlias 'KeyAlias'
+            keyPassword 'android'
+            storeFile file("keystore/demointegratern.keystore")
+            storePassword 'android'
+        }
     }
 
     buildTypes {
