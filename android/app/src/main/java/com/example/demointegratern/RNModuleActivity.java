@@ -2,6 +2,7 @@ package com.example.demointegratern;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
@@ -92,5 +93,14 @@ public class RNModuleActivity extends Activity implements DefaultHardwareBackBtn
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_MENU && mReactInstanceManager != null) {
+            mReactInstanceManager.showDevOptionsDialog();
+            return true;
+        }
+        return super.onKeyUp(keyCode, event);
     }
 }
