@@ -29,4 +29,11 @@ public class TestConnectNativeModule extends ReactContextBaseJavaModule {
     public void sendCallbackToNative(Callback rnCallback) {
         rnCallback.invoke("A greeting from java");
     }
+
+    @ReactMethod
+    public void finishActivity() {
+        if (getCurrentActivity() != null) {
+            getCurrentActivity().finish();
+        }
+    }
 }
