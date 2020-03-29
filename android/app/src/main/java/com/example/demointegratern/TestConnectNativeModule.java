@@ -1,5 +1,6 @@
 package com.example.demointegratern;
 
+import android.content.Intent;
 import android.util.Log;
 
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -34,6 +35,14 @@ public class TestConnectNativeModule extends ReactContextBaseJavaModule {
     public void finishActivity() {
         if (getCurrentActivity() != null) {
             getCurrentActivity().finish();
+        }
+    }
+
+    @ReactMethod
+    public void goToSecondActivity() {
+        if (getCurrentActivity() != null) {
+            Intent intent = new Intent(getCurrentActivity(), SecondActivity.class);
+            getCurrentActivity().startActivity(intent);
         }
     }
 }

@@ -32,6 +32,10 @@ class TestConnectNativeScreen extends Component {
     });
   };
 
+  goToSecondNativeScr = () => {
+    TestConnectNative.goToNative(rootTag);
+  };
+
   onMenuPress = () => {
     this.props.navigation.openDrawer();
   };
@@ -55,6 +59,11 @@ class TestConnectNativeScreen extends Component {
           style={styles.btnSend}
           onPress={this.sendCallbackToNative}>
           <Text style={styles.textBtnSend}>Send callback to native</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btnSend}
+          onPress={this.goToSecondNativeScr}>
+          <Text style={styles.textBtnSend}>Go to second native screen</Text>
         </TouchableOpacity>
       </View>
     );

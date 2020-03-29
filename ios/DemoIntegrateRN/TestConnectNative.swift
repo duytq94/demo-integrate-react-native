@@ -19,11 +19,25 @@ class TestConnectNativeModule: NSObject {
     }
     
     @objc
-    func dismissPresentedViewController (_ reactTag: NSNumber) {
+    func goToSecondViewController (_ reactTag: NSNumber) {
         DispatchQueue.main.async {
             if let view = RNViewManager.sharedInstance.bridge?.uiManager.view(forReactTag: reactTag) {
-                let presentedViewController: UIViewController! = view.reactViewController()
-                presentedViewController.dismiss(animated: true, completion: nil)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let secondScr = storyBoard.instantiateViewController(withIdentifier: "SecondView") as! SencondViewController
+                secondScr.modalPresentationStyle = .fullScreen
+
+                let secondVC: UIViewController! = view.reactViewController()
+                secondVC.present(secondScr, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @objc
+    func dismissViewController (_ reactTag: NSNumber) {
+        DispatchQueue.main.async {
+            if let view = RNViewManager.sharedInstance.bridge?.uiManager.view(forReactTag: reactTag) {
+                let reactNativeVC: UIViewController! = view.reactViewController()
+                reactNativeVC.dismiss(animated: true, completion: nil)
             }
         }
     }

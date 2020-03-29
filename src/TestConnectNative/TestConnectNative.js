@@ -14,9 +14,17 @@ const TestConnectNative = {
 
   exitRN: tag => {
     if (Platform.OS === 'ios') {
-      testConnectNative.dismissPresentedViewController(tag);
+      testConnectNative.dismissViewController(tag);
     } else {
       testConnectNative.finishActivity();
+    }
+  },
+
+  goToNative: tag => {
+    if (Platform.OS === 'ios') {
+      testConnectNative.goToSecondViewController(tag);
+    } else {
+      testConnectNative.goToSecondActivity();
     }
   },
 };

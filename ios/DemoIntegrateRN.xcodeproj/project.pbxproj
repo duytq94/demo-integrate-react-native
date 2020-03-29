@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000F115B24306A34002F4E1C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000F115A24306A34002F4E1C /* SecondViewController.swift */; };
 		00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 00265C342420866A0047B6D4 /* TestConnectNative.m */; };
 		00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00265C362420BF820047B6D4 /* TestConnectNative.swift */; };
 		00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D083272429E31C00C54A10 /* RNViewManager.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000F115A24306A34002F4E1C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoIntegrateRN-Bridging-Header.h"; sourceTree = "<group>"; };
 		00265C342420866A0047B6D4 /* TestConnectNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestConnectNative.m; sourceTree = "<group>"; };
 		00265C362420BF820047B6D4 /* TestConnectNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnectNative.swift; sourceTree = "<group>"; };
@@ -175,17 +177,18 @@
 		402789472419F02900DDDD5B /* DemoIntegrateRN */ = {
 			isa = PBXGroup;
 			children = (
+				4027894E2419F02900DDDD5B /* Main.storyboard */,
+				402789512419F02A00DDDD5B /* Assets.xcassets */,
+				402789562419F02A00DDDD5B /* Info.plist */,
 				00265C332420866A0047B6D4 /* DemoIntegrateRN-Bridging-Header.h */,
 				402789482419F02900DDDD5B /* AppDelegate.swift */,
 				4027894A2419F02900DDDD5B /* SceneDelegate.swift */,
 				4027894C2419F02900DDDD5B /* ViewController.swift */,
-				4027894E2419F02900DDDD5B /* Main.storyboard */,
-				402789512419F02A00DDDD5B /* Assets.xcassets */,
 				402789532419F02A00DDDD5B /* LaunchScreen.storyboard */,
-				402789562419F02A00DDDD5B /* Info.plist */,
 				00265C342420866A0047B6D4 /* TestConnectNative.m */,
 				00265C362420BF820047B6D4 /* TestConnectNative.swift */,
 				00D083272429E31C00C54A10 /* RNViewManager.swift */,
+				000F115A24306A34002F4E1C /* SecondViewController.swift */,
 			);
 			path = DemoIntegrateRN;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */,
 				4027894D2419F02900DDDD5B /* ViewController.swift in Sources */,
 				402789492419F02900DDDD5B /* AppDelegate.swift in Sources */,
+				000F115B24306A34002F4E1C /* SecondViewController.swift in Sources */,
 				00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */,
 				4027894B2419F02900DDDD5B /* SceneDelegate.swift in Sources */,
 			);
