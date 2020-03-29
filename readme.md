@@ -19,4 +19,4 @@ Integrating react native with existing Android and iOS native projects.
 https://medium.com/@duytq94/integrating-react-native-with-existing-android-and-ios-native-projects-175cc9517c1
 
 ## Demo
-https://youtu.be/F5gbou-rRVw
+https://youtu.be/p7yPbCJi8s8
