@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     @IBAction func BtnGoReactView(_ sender: Any) {
         let messageFromNative: String = textField.text!
         
-        //        We'll don't init RCTRootView through bundleURL but by bridge for using dismiss
+        //        We'll don't init RCTRootView through bundleURL but by bridge for using dismiss later
         //        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
         //        let rootView = RCTRootView(
         //            bundleURL: jsCodeLocation!,
