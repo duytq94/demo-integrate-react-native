@@ -25,4 +25,15 @@ class ViewController: UIViewController {
         reactNativeVC.modalPresentationStyle = .fullScreen
         present(reactNativeVC, animated: true)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
 }
