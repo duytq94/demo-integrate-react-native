@@ -17,79 +17,71 @@ import com.swmansion.reanimated.ReanimatedPackage
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage
 
 class RNModuleActivity : Activity(), DefaultHardwareBackBtnHandler {
-    private var mReactRootView: ReactRootView? = null
-    private var mReactInstanceManager: ReactInstanceManager? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        SoLoader.init(this, false)
+  private var mReactRootView: ReactRootView? = null
+  private var mReactInstanceManager: ReactInstanceManager? = null
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    SoLoader.init(this, false)
 
-        // If not, navigation.goBack() not working
-        mReactRootView = RNGestureHandlerEnabledRootView(this)
-        // mReactRootView = new ReactRootView(this);
-        mReactInstanceManager = ReactInstanceManager.builder()
-                .setApplication(application)
-                .setCurrentActivity(this)
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("index")
-                .addPackage(MainReactPackage())
-                .addPackage(ReanimatedPackage())
-                .addPackage(VectorIconsPackage())
-                .addPackage(RNGestureHandlerPackage())
-                .addPackage(AsyncStoragePackage())
-                .addPackage(SafeAreaContextPackage())
-                .addPackage(TestConnectNativePackage())
-                .setUseDeveloperSupport(BuildConfig.DEBUG)
-                .setInitialLifecycleState(LifecycleState.RESUMED)
-                .build()
+    // If not, navigation.goBack() not working
+    mReactRootView = RNGestureHandlerEnabledRootView(this)
+    // mReactRootView = new ReactRootView(this);
+    mReactInstanceManager = ReactInstanceManager.builder()
+        .setApplication(application)
+        .setCurrentActivity(this)
+        .setBundleAssetName("index.android.bundle")
+        .setJSMainModulePath("index")
+        .addPackage(MainReactPackage())
+        .addPackage(ReanimatedPackage())
+        .addPackage(VectorIconsPackage())
+        .addPackage(RNGestureHandlerPackage())
+        .addPackage(AsyncStoragePackage())
+        .addPackage(SafeAreaContextPackage())
+        .addPackage(TestConnectNativePackage())
+        .setUseDeveloperSupport(BuildConfig.DEBUG)
+        .setInitialLifecycleState(LifecycleState.RESUMED)
+        .build()
 
-        // Send message from native code
-        val initialProperties = Bundle()
-        initialProperties.putString("message_from_native", intent?.extras?.get("message_from_native")?.toString())
-        (mReactRootView as RNGestureHandlerEnabledRootView).startReactApplication(mReactInstanceManager, "DemoIntegrateRN", initialProperties)
-        setContentView(mReactRootView)
+    // Send message from native code
+    val initialProperties = Bundle()
+    initialProperties.putString("message_from_native", intent?.extras?.get("message_from_native")?.toString())
+    (mReactRootView as RNGestureHandlerEnabledRootView).startReactApplication(mReactInstanceManager, "DemoIntegrateRN", initialProperties)
+    setContentView(mReactRootView)
+  }
+
+  override fun invokeDefaultOnBackPressed() {
+    super.onBackPressed()
+  }
+
+  override fun onPause() {
+    super.onPause()
+    mReactInstanceManager?.onHostPause(this)
+  }
+
+  override fun onResume() {
+    super.onResume()
+    mReactInstanceManager?.onHostResume(this, this)
+  }
+
+  override fun onDestroy() {
+    super.onDestroy()
+    mReactInstanceManager?.onHostDestroy(this)
+    mReactRootView?.unmountReactApplication()
+  }
+
+  override fun onBackPressed() {
+    if (mReactInstanceManager != null) {
+      mReactInstanceManager!!.onBackPressed()
+    } else {
+      super.onBackPressed()
     }
+  }
 
-    override fun invokeDefaultOnBackPressed() {
-        super.onBackPressed()
+  override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
+    if (keyCode == KeyEvent.KEYCODE_MENU) {
+      mReactInstanceManager?.showDevOptionsDialog()
+      return true
     }
-
-    override fun onPause() {
-        super.onPause()
-        if (mReactInstanceManager != null) {
-            mReactInstanceManager!!.onHostPause(this)
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (mReactInstanceManager != null) {
-            mReactInstanceManager!!.onHostResume(this, this)
-        }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        if (mReactInstanceManager != null) {
-            mReactInstanceManager!!.onHostDestroy(this)
-        }
-        if (mReactRootView != null) {
-            mReactRootView!!.unmountReactApplication()
-        }
-    }
-
-    override fun onBackPressed() {
-        if (mReactInstanceManager != null) {
-            mReactInstanceManager!!.onBackPressed()
-        } else {
-            super.onBackPressed()
-        }
-    }
-
-    override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_MENU && mReactInstanceManager != null) {
-            mReactInstanceManager!!.showDevOptionsDialog()
-            return true
-        }
-        return super.onKeyUp(keyCode, event)
-    }
+    return super.onKeyUp(keyCode, event)
+  }
 }
